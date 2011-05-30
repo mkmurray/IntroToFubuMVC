@@ -1,0 +1,2 @@
+﻿<viewdata model="IntroToFubu.Models.View.HelloViewModel" />
+<h1>Hello ${Model.Name}</h1>
