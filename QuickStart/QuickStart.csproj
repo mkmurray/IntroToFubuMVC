@@ -97,7 +97,11 @@
   <ItemGroup>
     <Compile Include="App_Start\FubuMVC.cs" />
     <Compile Include="ConfigureFubuMVC.cs" />
+    <Compile Include="HelloWorldController.cs" />
+    <Compile Include="HelloWorldInHtmlController.cs" />
+    <Compile Include="HelloWorldWithHtmlTagsController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SayMyNameController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
