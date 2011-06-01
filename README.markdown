@@ -1,22 +1,26 @@
-A demonstration of FubuMVC's features:
+Intro to Fubu
+=============
 
-Bare Bones
-==========
+[FubuMVC](http://fubumvc.com)
+[Getting Started](http://guides.fubumvc.com/getting_started.html)
+
+Quick Start
+-----------
 
 Routes
-======
+------
 
 View Location
-=============
+-------------
 
 Diagnostics
-===========
+-----------
 
 Behaviors
-=========
+---------
 
 Html Conventions
-================
+----------------
 
 Model Binding
-=============
+-------------
