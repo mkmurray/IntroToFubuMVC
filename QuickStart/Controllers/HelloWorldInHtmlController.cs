@@ -1,4 +1,4 @@
-﻿namespace QuickStart
+﻿namespace QuickStart.Controllers
 {
     public class HelloWorldInHtmlController
     {

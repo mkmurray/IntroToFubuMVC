@@ -9,8 +9,9 @@ Read this informative guide: [Getting Started](http://guides.fubumvc.com/getting
 We will start exploring other fubu features from here.
 
 ##Routes
-1. UrlPattern attribute
-2. How to configure conventions
+1. Configure routing conventions using Routes DSL
+2. With UrlPattern attribute you can hard code routes with inputs/defaults
+3. Implement your own IUrlPolicy for complete control
 
 ##View Location
 1. Spark

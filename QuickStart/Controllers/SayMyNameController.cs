@@ -1,6 +1,6 @@
 ﻿using HtmlTags;
 
-namespace QuickStart
+namespace QuickStart.Controllers
 {
     public class SayMyNameController
     {

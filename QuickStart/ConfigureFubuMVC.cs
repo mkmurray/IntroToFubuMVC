@@ -1,4 +1,6 @@
+using System;
 using FubuMVC.Core;
+using QuickStart.Controllers;
 
 namespace QuickStart
 {
@@ -16,7 +18,10 @@ namespace QuickStart
             // Policies
             Routes
                 .IgnoreControllerNamesEntirely()
+                .IgnoreControllerNamespaceEntirely()
                 .IgnoreMethodSuffix("Html")
+                .HomeIs<UrlPatternController>(x => x.Routes_Summary())
+                .UrlPolicy<AllStringOutputRoutesAreSpecialPolicy>()
                 .RootAtAssemblyNamespace();
 
             // Match views to action methods by matching
@@ -24,4 +29,5 @@ namespace QuickStart
             Views.TryToAttachWithDefaultConventions();
         }
     }
+
 }
