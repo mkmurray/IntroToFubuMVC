@@ -43,7 +43,7 @@ namespace QuickStart.Controllers
         public string DefaultValuesForUrlPatterns(DefaultInputModel input)
         {
             //when nothing is specified, input.DefaultValue will == "likeThis"
-            return "currently a bug in implementation but will be fixed soon.";
+            return "Using value passed in or default value of \"likeThis\". Value = " + input.DefaultValue;
         }
     }
 

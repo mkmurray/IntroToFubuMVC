@@ -1,4 +1,3 @@
-using System;
 using FubuMVC.Core;
 using QuickStart.Controllers;
 
