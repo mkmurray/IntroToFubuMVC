@@ -7,6 +7,6 @@
     <title><use:title /></title>
   </head>
   <body>
-    <use:viewarea />
+    <use:view />
   </body>
 </html>
