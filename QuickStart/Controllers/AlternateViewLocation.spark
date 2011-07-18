@@ -1,0 +1,6 @@
+﻿﻿<viewdata model="QuickStart.Controllers.AlternateViewLocationViewModel" />
+
+<content:title>Alternate View Location</content:title>
+<content:viewarea>
+  <h1>${Model.Message}</h1>
+</content:viewarea>
