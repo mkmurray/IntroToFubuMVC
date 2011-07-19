@@ -20,4 +20,7 @@
       ${this.InputFor(x => x.FavoriteColor)}
     </div>
   </fieldset>
+
+  ${ this.LinkTo<HelloWorldController>(x => x.HelloWorld()).Text("Link!") }
+  ${ this.LinkTo(new NameModel { Name = "Mike" }).Text("Say my name") }
 </form>
