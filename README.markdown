@@ -1,4 +1,4 @@
-#[Intro to Fubu](http://fubumvc.com)
+#Intro to [FubuMVC](http://fubumvc.com)
 
 ##Bare Bones
 Directly after creating an empty web project and adding the FubuMVC NuGet package reference.
@@ -6,7 +6,7 @@ Directly after creating an empty web project and adding the FubuMVC NuGet packag
 ##Quick Start
 Read this informative guide: [Getting Started](http://guides.fubumvc.com/getting_started.html)
 
-We will start exploring other fubu features from here.
+We will start exploring other FubuMVC features from here.
 
 ##Routes
 1. Configure routing conventions using Routes DSL
@@ -22,10 +22,10 @@ We will start exploring other fubu features from here.
 2. Ideas for what you could do with behaviors
 
 ##Html Conventions
-Conventions that determine which inputs are generated for model properties
+Conventions that determine which HTML markup is generated for model properties.
 
 ##Model Binding
-Receiving posted form data
+Receiving posted form data automatically wired up to input models.
 
-##Custom ajax form submit with validation
-Ajax post forms serialized as json data with validation powered by FluentValidation.
+##Packaging
+Make your site more pluggable and modular with packages.
