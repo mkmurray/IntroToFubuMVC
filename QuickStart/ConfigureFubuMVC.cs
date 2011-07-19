@@ -1,5 +1,8 @@
+using System;
 using FubuMVC.Core;
+using FubuMVC.Core.UI.Configuration;
 using FubuMVC.Spark;
+using HtmlTags;
 using QuickStart.Behaviors;
 using QuickStart.Controllers;
 
@@ -21,7 +24,7 @@ namespace QuickStart
                 .IgnoreControllerNamesEntirely()
                 .IgnoreControllerNamespaceEntirely()
                 .IgnoreMethodSuffix("Html")
-                .HomeIs<BehaviorController>(x => x.VariableOutput())
+                .HomeIs<HtmlConventionsController>(x => x.BasicConventions())
                 .UrlPolicy<AllStringOutputRoutesAreSpecialPolicy>()
                 .RootAtAssemblyNamespace();
 
@@ -34,6 +37,15 @@ namespace QuickStart
             // Match views to action methods by matching
             // on model type, view name, and namespace
             Views.TryToAttachWithDefaultConventions();
+
+            HtmlConvention(x =>
+            {
+                x.Editors.IfPropertyIs<DateTime>().BuildBy(
+                    request => new TextboxTag().Attr("value", request.Value<DateTime>().ToShortDateString()));
+
+                x.Editors.IfPropertyIs<Colors>().Modify(
+                    (request, tag) => tag.Style("color", request.StringValue()));
+            });
         }
     }
 }

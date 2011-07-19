@@ -95,6 +95,7 @@
     <Content Include="Controllers\AlternateViewLocation.spark" />
     <Content Include="Global.asax" />
     <Content Include="Shared\Application.spark" />
+    <Content Include="Views\BasicConventions.spark" />
     <Content Include="Views\VariableOutput.spark" />
     <Content Include="Views\ViewLocation\Hello.spark" />
     <Content Include="Web.config" />
@@ -118,6 +119,7 @@
     <Compile Include="ConfigureFubuMVC.cs" />
     <Compile Include="Controllers\AlternateViewLocationController.cs" />
     <Compile Include="Controllers\BehaviorController.cs" />
+    <Compile Include="Controllers\HtmlConventionsController.cs" />
     <Compile Include="Controllers\UrlPatternController.cs" />
     <Compile Include="Controllers\ViewLocationController.cs" />
     <Compile Include="Global.asax.cs">

@@ -1,0 +1,23 @@
+﻿<viewdata model="QuickStart.Controllers.BasicConventionsViewModel" />
+<content:title>Basic Html Conventions</content:title>
+
+<form>
+  <fieldset>
+    <div>
+      ${this.LabelFor(x => x.FirstName)}
+      ${this.InputFor(x => x.FirstName)}
+    </div>
+    <div>
+      ${this.LabelFor(x => x.LastName)}
+      ${this.InputFor(x => x.LastName)}
+    </div>
+    <div>
+      ${this.LabelFor(x => x.DateOfBirth)}
+      ${this.InputFor(x => x.DateOfBirth)}
+    </div>
+    <div>
+      ${this.LabelFor(x => x.FavoriteColor)}
+      ${this.InputFor(x => x.FavoriteColor)}
+    </div>
+  </fieldset>
+</form>
