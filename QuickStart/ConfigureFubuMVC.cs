@@ -1,6 +1,5 @@
 using System;
 using FubuMVC.Core;
-using FubuMVC.Core.UI.Configuration;
 using FubuMVC.Spark;
 using HtmlTags;
 using QuickStart.Behaviors;
@@ -24,6 +23,7 @@ namespace QuickStart
                 .IgnoreControllerNamesEntirely()
                 .IgnoreControllerNamespaceEntirely()
                 .IgnoreMethodSuffix("Html")
+                .ConstrainToHttpMethod(x => x.Method.Name.StartsWith("Edit"), "POST")
                 .HomeIs<HtmlConventionsController>(x => x.BasicConventions())
                 .UrlPolicy<AllStringOutputRoutesAreSpecialPolicy>()
                 .RootAtAssemblyNamespace();
@@ -42,8 +42,12 @@ namespace QuickStart
             {
                 x.Editors.IfPropertyIs<DateTime>().BuildBy(
                     request => new TextboxTag().Attr("value", request.Value<DateTime>().ToShortDateString()));
+                x.Displays.IfPropertyIs<DateTime>().BuildBy(
+                    request => new HtmlTag("span").Text(request.Value<DateTime>().ToShortDateString()));
 
                 x.Editors.IfPropertyIs<Colors>().Modify(
+                    (request, tag) => tag.Style("color", request.StringValue()));
+                x.Displays.IfPropertyIs<Colors>().Modify(
                     (request, tag) => tag.Style("color", request.StringValue()));
             });
         }

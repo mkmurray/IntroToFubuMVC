@@ -1,7 +1,7 @@
 ﻿<viewdata model="QuickStart.Controllers.BasicConventionsViewModel" />
 <content:title>Basic Html Conventions</content:title>
 
-<form>
+${ this.FormFor<InputModel>() }
   <fieldset>
     <div>
       ${this.LabelFor(x => x.FirstName)}
@@ -19,8 +19,9 @@
       ${this.LabelFor(x => x.FavoriteColor)}
       ${this.InputFor(x => x.FavoriteColor)}
     </div>
+    <input type="submit" value="Submit" />
   </fieldset>
+${ this.EndForm() }
 
-  ${ this.LinkTo<HelloWorldController>(x => x.HelloWorld()).Text("Link!") }
-  ${ this.LinkTo(new NameModel { Name = "Mike" }).Text("Say my name") }
-</form>
+${ this.LinkTo<HelloWorldController>(x => x.HelloWorld()).Text("Link!") }
+${ this.LinkTo(new NameModel { Name = "Mike" }).Text("Say my name") }

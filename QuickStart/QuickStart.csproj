@@ -120,6 +120,7 @@
     <Compile Include="Controllers\AlternateViewLocationController.cs" />
     <Compile Include="Controllers\BehaviorController.cs" />
     <Compile Include="Controllers\HtmlConventionsController.cs" />
+    <Compile Include="Controllers\ModelBindingController.cs" />
     <Compile Include="Controllers\UrlPatternController.cs" />
     <Compile Include="Controllers\ViewLocationController.cs" />
     <Compile Include="Global.asax.cs">
@@ -136,6 +137,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Shared\_global.spark" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ModelBinding.spark">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

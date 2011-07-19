@@ -1,0 +1,15 @@
+﻿<viewdata model="QuickStart.Controllers.ModelBindingViewModel" />
+<content:title>Model Binding Form Posted</content:title>
+
+<div>
+  ${this.DisplayFor(x => x.FirstName)}
+</div>
+<div>
+  ${this.DisplayFor(x => x.LastName)}
+</div>
+<div>
+  ${this.DisplayFor(x => x.DateOfBirth)}
+</div>
+<div>
+  ${this.DisplayFor(x => x.FavoriteColor)}
+</div>
