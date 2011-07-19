@@ -1,0 +1,8 @@
+﻿<viewdata model="QuickStart.Controllers.VariableOutputViewModel" />
+<content:title>Variable Output</content:title>
+
+${Model.Name}
+${Model.DateOfBirth}
+${Model.Address.Line1}
+${Model.Address.StateCode}
+${Model.Address.ZipCode}

@@ -71,6 +71,7 @@
     <Reference Include="StructureMap">
       <HintPath>packages\structuremap.2.6.2\lib\StructureMap.dll</HintPath>
     </Reference>
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -94,6 +95,7 @@
     <Content Include="Controllers\AlternateViewLocation.spark" />
     <Content Include="Global.asax" />
     <Content Include="Shared\Application.spark" />
+    <Content Include="Views\VariableOutput.spark" />
     <Content Include="Views\ViewLocation\Hello.spark" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -106,8 +108,16 @@
   <ItemGroup>
     <Compile Include="AllStringOutputRoutesAreSpecialPolicy.cs" />
     <Compile Include="App_Start\FubuMVC.cs" />
+    <Compile Include="Behaviors\CustomXmlSerializer.cs" />
+    <Compile Include="Behaviors\RenderVariableOutput.cs" />
+    <Compile Include="Behaviors\RenderXmlNode.cs" />
+    <Compile Include="Behaviors\RenderXmlOutput.cs" />
+    <Compile Include="Behaviors\TransactionalBehavior.cs" />
+    <Compile Include="Behaviors\VariableOutputConvention.cs" />
+    <Compile Include="Behaviors\VariableOutputNode.cs" />
     <Compile Include="ConfigureFubuMVC.cs" />
     <Compile Include="Controllers\AlternateViewLocationController.cs" />
+    <Compile Include="Controllers\BehaviorController.cs" />
     <Compile Include="Controllers\UrlPatternController.cs" />
     <Compile Include="Controllers\ViewLocationController.cs" />
     <Compile Include="Global.asax.cs">

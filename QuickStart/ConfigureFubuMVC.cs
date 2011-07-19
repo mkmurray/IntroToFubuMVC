@@ -1,5 +1,6 @@
 using FubuMVC.Core;
 using FubuMVC.Spark;
+using QuickStart.Behaviors;
 using QuickStart.Controllers;
 
 namespace QuickStart
@@ -20,16 +21,19 @@ namespace QuickStart
                 .IgnoreControllerNamesEntirely()
                 .IgnoreControllerNamespaceEntirely()
                 .IgnoreMethodSuffix("Html")
-                .HomeIs<ViewLocationController>(x => x.SayHelloWithSpark())
+                .HomeIs<BehaviorController>(x => x.VariableOutput())
                 .UrlPolicy<AllStringOutputRoutesAreSpecialPolicy>()
                 .RootAtAssemblyNamespace();
 
             this.UseSpark();
+
+            ApplyConvention<VariableOutputConvention>();
+            Policies.ConditionallyWrapBehaviorChainsWith<TransactionalBehavior>(
+                x => x.Method.Name.StartsWith("Transactional"));
 
             // Match views to action methods by matching
             // on model type, view name, and namespace
             Views.TryToAttachWithDefaultConventions();
         }
     }
-
 }
