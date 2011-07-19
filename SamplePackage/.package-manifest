@@ -6,7 +6,7 @@
   <DataFileSet Include="*.*">
     <DeepSearch>true</DeepSearch>
   </DataFileSet>
-  <ContentFileSet Include="*.as*x;*.spark;Content\*.*;*.xml">
+  <ContentFileSet Include="*.spark">
     <DeepSearch>true</DeepSearch>
   </ContentFileSet>
 </package>

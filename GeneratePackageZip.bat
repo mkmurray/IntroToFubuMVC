@@ -1,0 +1,1 @@
+Lib\Fubu.exe create-pak SamplePackage SamplePackage.zip -f -pdb
