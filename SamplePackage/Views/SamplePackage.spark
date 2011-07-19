@@ -1,0 +1,4 @@
+﻿<viewdata model="SamplePackage.Controllers.SamplePackageViewModel" />
+<content:title>Sample package</content:title>
+
+<h1>Hello from a package!</h1>

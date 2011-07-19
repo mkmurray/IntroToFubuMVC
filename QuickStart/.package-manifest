@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Role>Application</Role>
+  <Name>QuickStart</Name>
+  <assembly>QuickStart</assembly>
+  <include>../SamplePackage</include>
+</package>

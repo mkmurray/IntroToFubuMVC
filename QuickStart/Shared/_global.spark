@@ -1,1 +1,2 @@
 ﻿<use namespace="QuickStart.Controllers" />
+<use namespace="SamplePackage.Controllers" />

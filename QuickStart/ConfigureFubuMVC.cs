@@ -18,13 +18,17 @@ namespace QuickStart
             // in this assembly are assumed to be action methods
             Actions.IncludeClassesSuffixedWithController();
 
+            Applies
+                .ToThisAssembly()
+                .ToAllPackageAssemblies();
+
             // Policies
             Routes
                 .IgnoreControllerNamesEntirely()
                 .IgnoreControllerNamespaceEntirely()
                 .IgnoreMethodSuffix("Html")
                 .ConstrainToHttpMethod(x => x.Method.Name.StartsWith("Edit"), "POST")
-                .HomeIs<HtmlConventionsController>(x => x.BasicConventions())
+                .HomeIs<ViewLocationController>(x => x.SayHelloWithSpark())
                 .UrlPolicy<AllStringOutputRoutesAreSpecialPolicy>()
                 .RootAtAssemblyNamespace();
 
@@ -36,7 +40,9 @@ namespace QuickStart
 
             // Match views to action methods by matching
             // on model type, view name, and namespace
-            Views.TryToAttachWithDefaultConventions();
+            Views
+                .TryToAttachWithDefaultConventions()
+                .TryToAttachViewsInPackages();
 
             HtmlConvention(x =>
             {
