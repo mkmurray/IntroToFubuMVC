@@ -143,9 +143,6 @@
     <Content Include="fubu-content\fubumvc-diagnostics.zip" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fubu-content\basic-getting-started.zip" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include=".links" />
     <None Include=".package-manifest" />
   </ItemGroup>

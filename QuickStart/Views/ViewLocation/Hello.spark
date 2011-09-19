@@ -2,4 +2,4 @@
 <content:title>View Location</content:title>
 
 <h1>${Model.Message}</h1>
-${ this.LinkTo<SamplePackageController>(x => x.TransactionalSample()).Text("Load route from package") }
+${ this.LinkTo<SamplePackage.Controllers.SamplePackageController>(x => x.TransactionalSample()).Text("Load route from package") }
